@@ -118,9 +118,9 @@ function init() {
     });
 
 	var i = 0;
-	while(i < point.length) {
+	while(i < data.length) {
 		var row_data = data[i];
-				//var point = points[i];
+		var point = points[i];
 
 		var x = Number (row_data[10]);
 		var y = Number (row_data[9]);
@@ -128,7 +128,7 @@ function init() {
 
 		var placemark = new ymaps.Placemark([x, y], {
 			content: text,
-			balloonContent: text + " тут!Э"
+			balloonContent: text + " тут!"
 		});
 		myMap.geoObjects.add(placemark);
 		i = i + 1; // i++;
