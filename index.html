@@ -98,7 +98,7 @@ var data = [
 function init() {
     myMap = new ymaps.Map("map", {
         center: [41.46, 74.55],
-        zoom: 7,
+        zoom: 6,
         type: 'yandex#publicMapHybrid'
     });
 
@@ -132,8 +132,8 @@ function init() {
     myControlGroup.events.add(['click'], function(e) {
         alert(e.get('target').data.get('content'));
     });
-    //myMap.controls.add(myControlGroup);
-    //myMap.behaviors.enable('ruler');
+    myMap.controls.add(myControlGroup);
+    myMap.behaviors.enable('ruler');
 	
     myMap.controls.add(new ymaps.control.ZoomControl());
     myMap.controls.add('searchControl');
