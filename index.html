@@ -101,6 +101,7 @@ function init() {
         zoom: 7,
         type: 'yandex#publicMapHybrid'
     });
+    myMap.options.set('scrollZoomSpeed', 0.5);
 
 	var i = 0;
 	while(i < data.length) {
