@@ -100,7 +100,7 @@ function init() {
         center: [41.46, 74.55],
         zoom: 6,
         type: 'yandex#publicMapHybrid',
-       	controls: ['default'] //станд набор эл-тов упр
+       	//controls: ['default'] //станд набор эл-тов упр
     });
 
 	var i = 0;
@@ -138,6 +138,26 @@ function init() {
 	
     myMap.controls.add(new ymaps.control.ZoomControl());
     myMap.controls.add('searchControl');
+    
+            var myGeoObject = new ymaps.GeoObject({
+            // Описание геометрии.
+            geometry: {
+                type: "Point",
+                coordinates: [41.46, 74.55]
+            },
+            // Свойства.
+            properties: {
+                // Контент метки.
+                iconContent: 'Я тащусь',
+                hintContent: 'Ну давай уже тащи'
+            }
+        }, {
+            // Опции.
+            // Иконка метки будет растягиваться под размер ее содержимого.
+            preset: 'islands#blackStretchyIcon',
+            // Метку можно перемещать.
+            draggable: true
+        });
 	
 	
 	
