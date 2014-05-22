@@ -97,7 +97,7 @@ var data = [
 
 function init() {
     myMap = new ymaps.Map("map", {
-        center: [41.46, 74.55],  
+        center: [41.46, 74.55],
     });
 
 	var i = 0;
@@ -112,7 +112,7 @@ function init() {
 		var placemark = new ymaps.Placemark([x, y], {
 			content: text,
 			balloonContent: text + " тут!",
-			preset: 'twirl#redStretchyIcon'
+			//preset: 'twirl#redStretchyIcon'
 		});
 		myMap.geoObjects.add(placemark);
 		i = i + 1; // i++;
