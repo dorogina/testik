@@ -100,7 +100,7 @@ function init() {
         center: [41.46, 74.55],
         zoom: 6,
         type: 'yandex#publicMapHybrid',
-        controls: ['smallMapDefaultSet']
+       // controls: ['smallMapDefaultSet'] //станд набор эл-тов упр
     });
 
 	var i = 0;
@@ -137,7 +137,7 @@ function init() {
     myMap.behaviors.enable('ruler');
 	
     myMap.controls.add(new ymaps.control.ZoomControl());
-    myMap.controls.add('searchControl');
+    //myMap.controls.add('searchControl');
 	
 	
 	
