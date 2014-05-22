@@ -101,7 +101,6 @@ function init() {
         zoom: 7,
         type: 'yandex#publicMapHybrid'
     });
-    myMap.options.set('scrollZoomSpeed', 0.5);
 
 	var i = 0;
 	while(i < data.length) {
@@ -123,12 +122,12 @@ function init() {
 	}
 	var myControlGroup = new ymaps.control.Group({
         items: [
-        new ymaps.control.Button('Первый'), 
+        	new ymaps.control.Button('Первый'), 
 		new ymaps.control.Button('Второй'), 
 		new ymaps.control.Button('Расчет окончен')
 		]
 		}, {
-        selectOnClick: false
+        selectOnClick: true
 	});
     myControlGroup.events.add(['click'], function(e) {
         alert(e.get('target').data.get('content'));
