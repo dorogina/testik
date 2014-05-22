@@ -105,11 +105,11 @@ function init() {
 		
 		var x = Number (row_data[10);
 		var y = Number (row_data[9]);
-		var text = row_data[6];
+		var text = row_data[6]+ '' +row_data[1];
 		
 		var placemark = new ymaps.Placemark([x, y], {
 			content: text,
-			balloonContent: text + " тут!Э"
+			balloonContent: text + " тут!"
 		});
 		myMap.geoObjects.add(placemark);
 		i = i + 1; // i++;
